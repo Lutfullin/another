@@ -6,6 +6,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 # comment here
+# another comment here
 #bot = telebot.TeleBot(config.token, parse_mode=None)
 #подключаемся к ботику
 bot = telebot.TeleBot("1691512641:AAE6IfALbbm8I4jkfBRQDvGNl4RsgVcqMxs", parse_mode=None)
@@ -76,7 +77,7 @@ def send_welcome(message):
         }
     }
     '''
-    
+
     ref.child(str(message.chat.id)).update({"state":"start"})
 
     bot.send_message(message.chat.id,
